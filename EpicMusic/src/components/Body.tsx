@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import NuoveUscite from "./NuoveUscite";
 import Altro from "./altro";
+import MyFooter from "./MyFooter";
 
 function Body() {
   return (
@@ -53,6 +54,7 @@ function Body() {
       </Container>
       <NuoveUscite />
       <Altro />
+      <MyFooter />
     </>
   );
 }
