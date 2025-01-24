@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import NuoveUscite from "./NuoveUscite";
+import Altro from "./altro";
 
 function Body() {
   return (
@@ -51,6 +52,7 @@ function Body() {
         </Row>
       </Container>
       <NuoveUscite />
+      <Altro />
     </>
   );
 }

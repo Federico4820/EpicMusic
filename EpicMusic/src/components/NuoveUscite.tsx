@@ -7,7 +7,7 @@ function NuoveUscite() {
   const GetSongs = async () => {
     try {
       const respons = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=audiomachine"
       );
       if (respons.ok) {
         const data = await respons.json();
@@ -30,11 +30,17 @@ function NuoveUscite() {
         <h5>Nuove uscite</h5>
       </Row>
 
-      <Row className=" row-cols-3">
-        <Col>
-          <img src="./src/assets/images/2a.png" className=" w-100" />
-          <p style={{ fontSize: "12px" }}>pròlogo con Abuelo</p>
-        </Col>
+      <Row className=" row-cols-3" lg={4} xl={5}>
+        {song &&
+          song.map((s) => {
+            return (
+              <Col className=" mt-5">
+                <img src={s.album.cover_big} className=" w-100" />
+                <p style={{ fontSize: "12px" }}>{s.title}</p>
+                <p style={{ fontSize: "12px" }}>{s.artist.name}</p>
+              </Col>
+            );
+          })}
       </Row>
     </Container>
   );
