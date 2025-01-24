@@ -17,10 +17,10 @@ function MyNav() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar className=" bg-dark">
+    <Navbar style={{ backgroundColor: "#2C2C2C" }}>
       <Container fluid>
         <Row className=" w-100 text-center align-items-center row-cols-3">
-          <Col sm={4}>
+          <Col style={{ backgroundColor: "#2C2C2C" }}>
             <Button variant="dark" onClick={handleShow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,10 @@ function MyNav() {
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
-          <Col sm={4}>
+          <Col
+            className=" align-content-center"
+            style={{ backgroundColor: "#2C2C2C", height: "38px" }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -90,8 +93,13 @@ function MyNav() {
               ></path>
             </svg>
           </Col>
-          <Col sm={4}>
-            <Nav.Link className=" text-danger ">ACCEDI</Nav.Link>
+          <Col className=" ">
+            <Nav.Link
+              className=" text-danger align-content-center"
+              style={{ backgroundColor: "#2C2C2C", height: "38px" }}
+            >
+              ACCEDI
+            </Nav.Link>
           </Col>
         </Row>
       </Container>
